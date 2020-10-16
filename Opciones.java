@@ -57,4 +57,18 @@ public class Opciones {
         System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
     }
 
+    public static void Error()
+    {
+        System.out.println("\n|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+        System.out.println("||" + ConsoleColors.RED + "                 _   ______ _____  _____   ____  _____    _                    " + ConsoleColors.RESET + "||");
+        System.out.println("||" + ConsoleColors.RED + "                (_) |  ____|  __ \\|  __ \\ / __ \\|  __ \\  | |                   " + ConsoleColors.RESET + "||");
+        System.out.println("||" + ConsoleColors.RED + "                | | | |__  | |__) | |__) | |  | | |__) | | |                   " + ConsoleColors.RESET + "||");
+        System.out.println("||" + ConsoleColors.RED + "                | | |  __| |  _  /|  _  /| |  | |  _  /  | |                   " + ConsoleColors.RESET + "||");
+        System.out.println("||" + ConsoleColors.RED + "                | | | |____| | \\ \\| | \\ \\| |__| | | \\ \\  |_|                   " + ConsoleColors.RESET + "||");
+        System.out.println("||" + ConsoleColors.RED + "                |_| |______|_|  \\_\\_|  \\_\\\\____/|_|  \\_\\ (_)                   " + ConsoleColors.RESET + "||");
+        System.out.println("||                                                                               ||");
+        System.out.println("||                       Esa opcion no esta disponible                           ||");
+        System.out.println("||                                                                               ||");
+        System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+    }
 }

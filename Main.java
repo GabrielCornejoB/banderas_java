@@ -24,7 +24,7 @@ public class Main{
                     System.out.println("\nHas salido del programa\n");                  //Si elige la opción 4, sale del programa
                     break;
                 default:
-                    System.out.println("\nNum no disponible\n");
+                    Opciones.Error();
                     break;
             }
         }
