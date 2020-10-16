@@ -3,25 +3,25 @@ public class Main{
 
     public static void main(String[] args) {
         int opcion = 0;                                                                 //Variable para controlar el menu            
-        //Switch para ingresar a las distintas secciones de la aplicación
+        
         do
         {
             Opciones.Menu();                                                            //Llamado al metodo Menu() de la clase Opciones.java
-            opcion = ConsoleInput.getInt();
+            opcion = ConsoleInput.getInt();                                             //Pide por consola la opción a la que quiere acceder el usuario
 
-            switch(opcion)
+            switch(opcion)                                                              //Switch para ingresar a las distintas secciones de la aplicación
             {
                 case 1:
-                    System.out.println("\nImaginemos que este es el jueguito, la idea es que todo ese jueguito este en una clase llamada Juego.java\n");
+                    Juego.Nivel_1();                                                    //Si elige la opción 1, va al primer nivel del juego
                     break;
                 case 2:
-                    Opciones.Instrucciones();
+                    Opciones.Instrucciones();                                           //Si elige la opción 2, va a la ventana de instrucciones 
                     break;
                 case 3:
-                    Opciones.MasInfo();
+                    Opciones.MasInfo();                                                 //Si elige la opción 3, va a la ventana de acerca de
                     break;
                 case 4:
-                    System.out.println("\nHas salido del programa\n");
+                    System.out.println("\nHas salido del programa\n");                  //Si elige la opción 4, sale del programa
                     break;
                 default:
                     System.out.println("\nNum no disponible\n");
@@ -30,4 +30,5 @@ public class Main{
         }
         while(opcion != 4);      
     }
+
 }
