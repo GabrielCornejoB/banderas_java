@@ -1,5 +1,6 @@
 //Clase donde estaran las opciones del Menu, menos el juego
 public class Opciones {
+    //Metodo que muestra el menu principal
     public static void Menu()
     {
         //Prints para titulo inicial
@@ -16,7 +17,7 @@ public class Opciones {
         System.out.println("3. Acerca de");
         System.out.println("4. Salir\n");
     }
-
+    //Metodo que muestra las instrucciones del juego
     public static void Instrucciones()
     {
         System.out.println("\n|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
@@ -38,7 +39,7 @@ public class Opciones {
         System.out.println("||                                                                               ||");
         System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
     }
-
+    //Metodo que muestra más información del juego
     public static void MasInfo()
     {
         System.out.println("\n|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
@@ -56,7 +57,7 @@ public class Opciones {
         System.out.println("||                                                                               ||");
         System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
     }
-
+    //Metodo que muestra un mensaje de error si se ingresa un número no disponible
     public static void Error()
     {
         System.out.println("\n|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");

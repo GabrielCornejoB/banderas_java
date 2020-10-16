@@ -23,12 +23,12 @@ public class Main{
                 case 4:
                     System.out.println("\nHas salido del programa\n");                  //Si elige la opción 4, sale del programa
                     break;
-                default:
-                    Opciones.Error();
+                default:                                                                
+                    Opciones.Error();                                                   //Si coloca un numero distinto a esos 4, sale el mensaje de error de opcion no disp
                     break;
             }
         }
-        while(opcion != 4);      
+        while(opcion != 4);                                                             //Esta linea de codigo es la que hace que salga del programa cuando se presione el 4
     }
 
 }
