@@ -1,4 +1,6 @@
 //En este script será el que conecte los demás, la idea es tener el menor codigo posible sino que llamara a las demás clases
+
+//En el archivo .csv la primera linea de cada pais tiene los datos organizados de la siguiente manera:  Nombre país / comida tipica / capital
 public class Main{
 
     public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class Main{
             switch(opcion)                                                              //Switch para ingresar a las distintas secciones de la aplicación
             {
                 case 1:
-                    Juego.Nivel_1();                                                    //Si elige la opción 1, va al primer nivel del juego
+                    Juego.Prueba();                                                    //Si elige la opción 1, va al primer nivel del juego
                     break;
                 case 2:
                     Opciones.Instrucciones();                                           //Si elige la opción 2, va a la ventana de instrucciones 

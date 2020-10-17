@@ -2,6 +2,8 @@
 
 //La base de datos en archivo .csv en java es usada como un array de Strings, donde cada linea del archivo, cuenta como un String
 //Por ende para poder pintar las banderas primero debo hacer un metodo que coloree cada fila y luego otro que las imprima juntas
+
+//En el archivo .csv la primera linea de cada pais tiene los datos organizados de la siguiente manera:  Nombre país / comida tipica / capital
 public class BaseDeDatos {
     
     //Este metodo lo que hace es tomar fila por fila, recorrerla con un for, y si un caracter es igual a un número, pintarlo de un color en específico
@@ -86,12 +88,13 @@ public class BaseDeDatos {
         return indices;
     }
 
-    
+    //Esto está para pruebas, esta clase no debería de poder ejecutarse, es solo para probar funcionamiento
+    /*
     public static void main(String[] args) {
-        String banderas[] = ConsoleFile.read("recursos/info_banderas.csv");     //Lee la bandera, debe hacerse al principio de la clase Juego.java
-        int indices[] = CrearIndices(25);
-        ImprimirBandera(banderas, indices[0]);
-        //ImprimirDatos(banderas, 0, 2);
-    }
+        String banderas[] = ConsoleFile.read("recursos /info_banderas.csv");     //Lee la bandera, debe hacerse al principio de la clase Juego.java
+        int indices[] = CrearIndices(25);                                                //Esta linea crea los indices, de momento solo son 25 paises
+        ImprimirBandera(banderas, indices[0]);                                           //Esta linea imprime la bandera del indice 0
+        //ImprimirDatos(banderas, indices[0], 2);                                        //Esta linea muestra el dato 3 (capital) de la bandera en el indice 0
+    }*/
 
 }
