@@ -20,10 +20,37 @@ public class Juego {
 
         String banderas[] = ConsoleFile.read("recursos/info_banderas.csv");     //Lee la bandera, debe hacerse al principio de la clase Juego.java
         int indices[] = BaseDeDatos.CrearIndices(25); 
-        BaseDeDatos.ImprimirBandera(banderas, indices[random]);                                               //Esta linea crea los indices, de momento solo son 25 paises
 
+        BaseDeDatos.ImprimirBandera(banderas, indices[random]);  
+        System.out.println(""); 
+        BaseDeDatos.ImprimirDatos(banderas, indices[random], 0); 
+        System.out.println(""); 
+                
+            for (int i = 0 ; i<3; i++)
+            {
+                System.out.println("");
+                int randomDos = (int)(Math.random()*26);
 
+                if (random != randomDos)
+                {
+                    BaseDeDatos.ImprimirDatos(banderas, indices[randomDos], 0);  
+                    System.out.println("");  
+                }
+                else
+                {
+                    do
+                    {
+                        randomDos = (int)(Math.random()*26);
+                    }
+                    while (random == randomDos);  
+                    BaseDeDatos.ImprimirDatos(banderas, indices[randomDos], 0);  
+                    System.out.println("");   
+                }
 
+                       
+            }
+
+                                            
     }
     //MEDIO
     //La idea del nivel 2 es hacerlo con comidas tipicas
