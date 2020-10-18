@@ -89,12 +89,12 @@ public class BaseDeDatos {
     }
 
     //Esto está para pruebas, esta clase no debería de poder ejecutarse, es solo para probar funcionamiento
-    /*
+    
     public static void main(String[] args) {
-        String banderas[] = ConsoleFile.read("recursos /info_banderas.csv");     //Lee la bandera, debe hacerse al principio de la clase Juego.java
+        String banderas[] = ConsoleFile.read("recursos/info_banderas.csv");     //Lee la bandera, debe hacerse al principio de la clase Juego.java
         int indices[] = CrearIndices(25);                                                //Esta linea crea los indices, de momento solo son 25 paises
-        ImprimirBandera(banderas, indices[0]);                                           //Esta linea imprime la bandera del indice 0
-        //ImprimirDatos(banderas, indices[0], 2);                                        //Esta linea muestra el dato 3 (capital) de la bandera en el indice 0
-    }*/
+        //ImprimirBandera(banderas, indices[15]);                                           //Esta linea imprime la bandera del indice 0
+        //ImprimirDatos(banderas, indices[1], 0);                                        //Esta linea muestra el dato 3 (capital) de la bandera en el indice 0
+    }
 
 }
