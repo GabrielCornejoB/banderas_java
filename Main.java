@@ -14,7 +14,7 @@ public class Main{
             switch(opcion)                                                              //Switch para ingresar a las distintas secciones de la aplicación
             {
                 case 1:
-                    Juego.Prueba();                                                    //Si elige la opción 1, va al primer nivel del juego
+                    Juego.Nivel_1();                                                    //Si elige la opción 1, va al primer nivel del juego
                     break;
                 case 2:
                     Opciones.Instrucciones();                                           //Si elige la opción 2, va a la ventana de instrucciones 
