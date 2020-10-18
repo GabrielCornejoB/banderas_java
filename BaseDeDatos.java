@@ -61,9 +61,10 @@ public class BaseDeDatos {
     }
 
     //A este metodo se le entregan los mismos argumentos que al anterior, pero el indice solo debe ser la primera fila de cada pais
-    public static void ImprimirDatos(String[] banderas, int indice, int pregunta)
+    public static String ImprimirDatos(String[] banderas, int indice, int pregunta)
     {
         String datos[] = new String[27];                                        //Arreglo de Strings para almacenar los datos de cada pais, el tamaño luego se modificará
+        String respuesta = "";
 
         //Ciclo que llena el arreglo de información
         for (int i = indice; i < indice+1; i++) 
@@ -72,7 +73,9 @@ public class BaseDeDatos {
         }
         
         //Esto es para imprimir un dato en específico
-        System.out.print(datos[pregunta]);
+        //System.out.print(datos[pregunta]);
+        respuesta = datos[pregunta];
+        return respuesta;
     }
 
     //Este metodo coloca los indices de cada bandera en un arreglo, el argumento total, es el total de banderas

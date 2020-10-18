@@ -20,20 +20,23 @@ public class Juego {
 
         String banderas[] = ConsoleFile.read("recursos/info_banderas.csv");     //Lee la bandera, debe hacerse al principio de la clase Juego.java
         int indices[] = BaseDeDatos.CrearIndices(25); 
+        String respuestas[] = new String[4];
 
         BaseDeDatos.ImprimirBandera(banderas, indices[random]);  
         System.out.println(""); 
-        BaseDeDatos.ImprimirDatos(banderas, indices[random], 0); 
-        System.out.println(""); 
-                
-            for (int i = 0 ; i<3; i++)
+        System.out.println("Este es random" + random);
+        respuestas[0] = BaseDeDatos.ImprimirDatos(banderas, indices[random], 0); 
+        //System.out.println(""); 
+        
+            for (int i = 1 ; i<=3; i++)
             {
                 System.out.println("");
-                int randomDos = (int)(Math.random()*26);
+                int randomDos = (int)(Math.random()*25);
+                System.out.println(randomDos);
 
                 if (random != randomDos)
                 {
-                    BaseDeDatos.ImprimirDatos(banderas, indices[randomDos], 0);  
+                    respuestas[i] = BaseDeDatos.ImprimirDatos(banderas, indices[randomDos], 0);  
                     System.out.println("");  
                 }
                 else
@@ -43,12 +46,14 @@ public class Juego {
                         randomDos = (int)(Math.random()*26);
                     }
                     while (random == randomDos);  
-                    BaseDeDatos.ImprimirDatos(banderas, indices[randomDos], 0);  
+                    respuestas[i] = BaseDeDatos.ImprimirDatos(banderas, indices[randomDos], 0);  
                     System.out.println("");   
-                }
-
-                       
+                }              
             }
+            for (int j = 0; j < respuestas.length; j++) {
+                System.out.println(respuestas[j]);
+            }
+        
 
                                             
     }
