@@ -1,4 +1,6 @@
 //Clase donde iran los niveles del juego y probablemente el manejo de la puntuación
+
+//En el archivo .csv la primera linea de cada pais tiene los datos organizados de la siguiente manera:  Nombre país / comida tipica / capital
 public class Juego {
 
     //Letras ascii generada en http://patorjk.com/software/taag/#p=display&f=Doom&t=NIVEL%20%201 con fuente "Doom"
