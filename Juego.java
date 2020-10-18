@@ -16,7 +16,7 @@ public class Juego {
     //La idea del nivel 1 es mostrar una bandera al azar y que se generen 4 opciones (una correcta, y 3 incorrectas que se elegirán aleatoriamente)
     public static void Nivel_1()
     {
-        int random = (int)(Math.random()*26);
+        int random = (int)(Math.random()*25);
 
         String banderas[] = ConsoleFile.read("recursos/info_banderas.csv");     //Lee la bandera, debe hacerse al principio de la clase Juego.java
         int indices[] = BaseDeDatos.CrearIndices(25); 
@@ -24,35 +24,41 @@ public class Juego {
 
         BaseDeDatos.ImprimirBandera(banderas, indices[random]);  
         System.out.println(""); 
-        System.out.println("Este es random" + random);
         respuestas[0] = BaseDeDatos.ImprimirDatos(banderas, indices[random], 0); 
         //System.out.println(""); 
-        
-            for (int i = 1 ; i<=3; i++)
-            {
-                System.out.println("");
-                int randomDos = (int)(Math.random()*25);
-                System.out.println(randomDos);
 
-                if (random != randomDos)
+        int r2 = 0, r3 = 0, r4 = 0; 
+        r3 = (int)(Math.random()*25);
+        r2 = (int)(Math.random()*25);
+        r4 = (int)(Math.random()*25);
+
+        if (r2 != r3 && r2 != r4 && r2!= random && r3 != random && r4 != random)
+        {
+            respuestas[1] = BaseDeDatos.ImprimirDatos(banderas, indices[r2], 0);  
+            respuestas[2] = BaseDeDatos.ImprimirDatos(banderas, indices[r3], 0);  
+            respuestas[3] = BaseDeDatos.ImprimirDatos(banderas, indices[r4], 0);  
+        } 
+            else 
+            {
+                do
                 {
-                    respuestas[i] = BaseDeDatos.ImprimirDatos(banderas, indices[randomDos], 0);  
-                    System.out.println("");  
-                }
-                else
-                {
-                    do
-                    {
-                        randomDos = (int)(Math.random()*26);
-                    }
-                    while (random == randomDos);  
-                    respuestas[i] = BaseDeDatos.ImprimirDatos(banderas, indices[randomDos], 0);  
-                    System.out.println("");   
-                }              
+                    r2 = (int)(Math.random()*25);
+                    r3 = (int)(Math.random()*25);
+                    r4 = (int)(Math.random()*25);  
+                } 
+                while (r2 == r3 && r2 == r4 && r2== random && r3 == random && r4 == random);
+
+                    respuestas[1] = BaseDeDatos.ImprimirDatos(banderas, indices[r2], 0);  
+                    respuestas[2] = BaseDeDatos.ImprimirDatos(banderas, indices[r3], 0);  
+                    respuestas[3] = BaseDeDatos.ImprimirDatos(banderas, indices[r4], 0);  
             }
-            for (int j = 0; j < respuestas.length; j++) {
-                System.out.println(respuestas[j]);
-            }
+
+        for (int j = 0; j < respuestas.length; j++) 
+        {
+            System.out.println(respuestas[j]);
+        }
+
+        
         
 
                                             
