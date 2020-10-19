@@ -18,13 +18,16 @@ public class Juego {
     //FACIL
     //La idea del nivel 1 es mostrar una bandera al azar y que se generen 4 opciones (una correcta, y 3 incorrectas que se elegirán aleatoriamente)
     public static void Nivel_1()
-    {   
+{   
+
+    
+            
         //INICIZALICACIÓN DEL JUEGO
         String banderas[] = ConsoleFile.read("recursos/info_banderas.csv");                 //Lee la bandera, debe hacerse al principio de la clase Juego.java
-        int indices[] = BaseDeDatos.CrearIndices(25);                                       //Llamado al metodo de crear indices de la clase "BaseDeDatos", 25 indices porque son 25 banderas
+        int indices[] = BaseDeDatos.CrearIndices(25);                                       //Llamado al metodo de crear indices de la clase "BaseDeDatos", 25 indices porque son 25 banderas      
         int puntaje = 0;                                                                    //Variable para puntos (si llega a 50 pasa de nivel)
         //INICIALIZACIÓN DEL JUEGO
-        
+do{       
         int r1 = (int)(Math.random()*25);                                                   //Variable int que elige aleatoriamente un num del 0 al 25
         String respuestas[] = new String[4];                                                //Arreglo que almacena las 4 respuestas de cada intento (1 correcta, 3 random)
 
@@ -50,7 +53,7 @@ public class Juego {
         {
             respuestas[1] = BaseDeDatos.ImprimirDatos(banderas, indices[r2], 0);            //Si desde el principio ya es distinto, simplemente se asigna la respuesta
         }
-        //PROCESO PARA ELEGIR LA OPCION RANDOM 2
+        //---------------------------*
 
         //PROCESO PARA ELEGIR LA OPCION RANDOM 3
         r3 = (int)(Math.random()*25); 
@@ -67,7 +70,7 @@ public class Juego {
         {
             respuestas[2] = BaseDeDatos.ImprimirDatos(banderas, indices[r3], 0);
         }
-        //PROCESO PARA ELEGIR LA OPCION RANDOM 3
+        //---------------------------*
 
         //PROCESO PARA ELEGIR LA OPCION RANDOM 4
         r4 = (int)(Math.random()*25); 
@@ -84,7 +87,7 @@ public class Juego {
         {
             respuestas[3] = BaseDeDatos.ImprimirDatos(banderas, indices[r4], 0);
         }
-        //PROCESO PARA ELEGIR LA OPCION RANDOM 4
+        //---------------------------*
 
         //Desorganiza el arreglo          
         Random rand = new Random();                                                     //Usamos la clase "Random" (tocó importarla arriba)
@@ -108,7 +111,7 @@ public class Juego {
             System.out.println(contador_resps + ". " + respuestas[j]);
             contador_resps = contador_resps + 1;
         }     
-
+    
         //Elección de la respuesta correcta
         int eleccion = 0;                                                               //Variable elección (la cual ingresará el usuario)
         int correcta = 0;                                                               //Variable que almacenará la respuesta correcta
@@ -123,23 +126,32 @@ public class Juego {
                 //System.out.println(correcta);
             }
         }
+    
+        //puntaje----------------------------------*
+        eleccion = ConsoleInput.getInt();                                                  
 
-        eleccion = ConsoleInput.getInt();                                                   //Se pide la respuesta del usuario
-
-        if(eleccion == correcta)                                                            //Si la respuesta del usuario es correcta 
+        if(eleccion == correcta)                                                           
         {
-            puntaje = puntaje + 10;                                                         //Suma 10 puntos
+            puntaje = puntaje + 10;                                                         
         }
-        else                                                                                //De otro modo
+        else                                                                               
         {
-            puntaje = puntaje - 10;                                                         //Resta 10 puntos
+            puntaje = puntaje - 10; 
+            if (puntaje == -10) 
+            {
+                puntaje = puntaje + 10;    
+            }                                                             
         }   
         System.out.println("\nPUNTOS: " + puntaje + "\n");                                  //Imprime el puntaje despues de responder
+    
+    }while(puntaje >= 0 && puntaje < 100);
+    System.out.println("¡Felicidades completaste el nivel 1!");  
 
+    
         
         //La idea es que todooooo el codigo se repita varias veces para que no te devuelva al menu principal, eso falta
 
-    }
+}
     //MEDIO
     //La idea del nivel 2 es hacerlo con comidas tipicas
     public static void Nivel_2()
