@@ -31,7 +31,6 @@ public class Juego {
         System.out.println("");                                                             //Salto de linea
         respuestas[0] = BaseDeDatos.ImprimirDatos(banderas, indices[r1], 0);                //LLenamos el arreglo de respuestas con el nombre del país correspondiente al indice elegido con la var "r1"
         
-
         int r2 = 0, r3 = 0, r4 = 0;                                                         //Declaración e inicialización de las otas 3 variables random
 
         //PROCESO PARA ELEGIR LA OPCION RANDOM 2
@@ -100,12 +99,28 @@ public class Juego {
 
         System.out.println("");                                                         //Salto de linea
 
+        int contador_resps = 1;
         //Ciclo for que imprime el arreglo desorganizado
         for (int j = 0; j < respuestas.length; j++) 
         {
-            System.out.println(respuestas[j]);
+            System.out.println(contador_resps + ". " + respuestas[j]);
+            contador_resps = contador_resps + 1;
         }     
-        //System.out.println(Arrays.toString(respuestas));                              //Otra forma de imprimir el arreglo pero en horizontal
+
+        //Elección de la respuesta correcta
+
+        //El nivel se va a repetir maximo 10 veces, si adivina 5 preguntas pasa de nivel, si despues de las 10 no adivinó, ya pierde
+        //Si adivina una respuesta se le suman puntos pero si falla, se le restan
+
+        //int eleccion = 0;
+        //eleccion = ConsoleInput.getInt();
+
+        //primero hare como saber que una respuesta es correcta
+
+        
+
+        
+
 
     }
     //MEDIO
