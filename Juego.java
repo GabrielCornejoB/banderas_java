@@ -105,6 +105,11 @@ public class Juego {
         {
             System.out.println(contador_resps + ". " + respuestas[j]);
             contador_resps = contador_resps + 1;
+
+            if(respuestas[j].equals(BaseDeDatos.ImprimirDatos(banderas, indices[r1], 0)))
+            {
+                System.out.println("La de arriba es la correcta");
+            }
         }     
 
         //Elección de la respuesta correcta
