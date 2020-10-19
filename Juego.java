@@ -31,7 +31,7 @@ do{
         int r1 = (int)(Math.random()*25);                                                   //Variable int que elige aleatoriamente un num del 0 al 25
         String respuestas[] = new String[4];                                                //Arreglo que almacena las 4 respuestas de cada intento (1 correcta, 3 random)
 
-        System.out.println("\nPUNTOS: " + puntaje + "\n");
+        System.out.println( ConsoleColors.WHITE_BOLD + "\nPUNTOS: " + puntaje + "\n");
         BaseDeDatos.ImprimirBandera(banderas, indices[r1]);                                 //Imprime la bandera correspondiente al indice elegido con la var "r1"
         System.out.println("");                                                             //Salto de linea
         respuestas[0] = BaseDeDatos.ImprimirDatos(banderas, indices[r1], 0);                //LLenamos el arreglo de respuestas con el nombre del país correspondiente al indice elegido con la var "r1"
@@ -132,20 +132,23 @@ do{
 
         if(eleccion == correcta)                                                           
         {
-            puntaje = puntaje + 10;                                                         
+            puntaje = puntaje + 10;  
+            System.out.println("\n" + ConsoleColors.GREEN + "+10");                                                           
         }
-        else                                                                               
+        else                                                                              
         {
             puntaje = puntaje - 10; 
             if (puntaje == -10) 
             {
-                puntaje = puntaje + 10;    
-            }                                                             
-        }   
-        System.out.println("\nPUNTOS: " + puntaje + "\n");                                  //Imprime el puntaje despues de responder
-    
+                puntaje = puntaje + 10;  
+                System.out.println("\n" + ConsoleColors.RED + "-10");   
+                System.out.println("UFF, eso estuvo serca, menos mal que no tenemos puntajesnegativos :)"); 
+            }else{
+                 System.out.println("\n" + ConsoleColors.RED + "-10"); 
+            }                                                           
+        }                                                 
     }while(puntaje >= 0 && puntaje < 100);
-    System.out.println("¡Felicidades completaste el nivel 1!");  
+    System.out.println(ConsoleColors.GREEN_BOLD+"¡Felicidades completaste el nivel 1!");  
 
     
         
