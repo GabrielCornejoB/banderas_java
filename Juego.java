@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Random;
+
 //Clase donde iran los niveles del juego y probablemente el manejo de la puntuación
 public class Juego {
 
@@ -82,15 +85,28 @@ public class Juego {
         }
         //PROCESO PARA ELEGIR LA OPCION RANDOM 4
 
-        //Imprime las opciones del arreglo 
+        //Desorganiza el arreglo          
+        Random rand = new Random();                                                     //Usamos la clase "Random" (tocó importarla arriba)
+
+        //Ciclo for que se encarga de reemplazar el elemento del indice con uno generado aleatorimanete, al final del ciclo for que el arreglo desorganizado
+        for (int i = 0; i < respuestas.length; i++)                                     
+        {
+            int indiceRandomACambiar = rand.nextInt(respuestas.length);
+            String temp = respuestas[indiceRandomACambiar];
+
+            respuestas[indiceRandomACambiar] = respuestas[i];
+            respuestas[i] = temp;
+        }
+
+        System.out.println("");                                                         //Salto de linea
+
+        //Ciclo for que imprime el arreglo desorganizado
         for (int j = 0; j < respuestas.length; j++) 
         {
             System.out.println(respuestas[j]);
-        }
+        }     
+        //System.out.println(Arrays.toString(respuestas));                              //Otra forma de imprimir el arreglo pero en horizontal
 
-
-        //Desorganizar el arreglo
-                                     
     }
     //MEDIO
     //La idea del nivel 2 es hacerlo con comidas tipicas
