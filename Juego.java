@@ -110,7 +110,8 @@ do{
         {
             System.out.println(contador_resps + ". " + respuestas[j]);
             contador_resps = contador_resps + 1;
-        }     
+        }  
+            System.out.println("\n" + "5. salir");                                      //opción de salir   
     
         //Elección de la respuesta correcta
         int eleccion = 0;                                                               //Variable elección (la cual ingresará el usuario)
@@ -128,27 +129,52 @@ do{
         }
     
         //puntaje----------------------------------*
-        eleccion = ConsoleInput.getInt();                                                  
-
-        if(eleccion == correcta)                                                           
-        {
-            puntaje = puntaje + 10;  
-            System.out.println("\n" + ConsoleColors.GREEN + "+10");                                                           
+        eleccion = ConsoleInput.getInt();     
+        
+        if (eleccion > 4) {
+             break;
         }
-        else                                                                              
+        else
         {
-            puntaje = puntaje - 10; 
-            if (puntaje == -10) 
+
+            if(eleccion == correcta)                                                           
             {
-                puntaje = puntaje + 10;  
-                System.out.println("\n" + ConsoleColors.RED + "-10");   
-                System.out.println("UFF, eso estuvo serca, menos mal que no tenemos puntajesnegativos :)"); 
-            }else{
-                 System.out.println("\n" + ConsoleColors.RED + "-10"); 
-            }                                                           
-        }                                                 
-    }while(puntaje >= 0 && puntaje < 100);
-    System.out.println(ConsoleColors.GREEN_BOLD+"¡Felicidades completaste el nivel 1!");  
+                puntaje = puntaje + 10; 
+                if (puntaje == 50) {
+                    break;
+                } 
+                else
+                {
+                    System.out.println("\n" + ConsoleColors.GREEN + "+10");                                                              
+                } 
+            }   
+            else                                                                              
+            {
+                puntaje = puntaje - 10; 
+                if (puntaje == -10) 
+                {
+                    puntaje = puntaje + 10;  
+                    System.out.println("\n" + ConsoleColors.RED + "-10");   
+                    System.out.println("UFF, eso estuvo serca, menos mal que no tenemos puntajesnegativos :)"); 
+                }else
+                {
+                    System.out.println("\n" + ConsoleColors.RED + "-10"); 
+                }                                                           
+            }  
+        }    
+    
+    }while(puntaje >= 0 && puntaje < 50);
+    //comprueba si salio del juego forsosamente o lo gano
+    if (puntaje > 49) 
+    {
+        System.out.println(ConsoleColors.GREEN_BOLD+ "¡Felicidades completaste el nivel 1!");  
+    } 
+    //------------*
+    puntaje = 0;                               //reset del puntaje
+    
+
+     
+    
 
     
         
