@@ -22,11 +22,13 @@ public class Juego {
         //INICIZALICACIÓN DEL JUEGO
         String banderas[] = ConsoleFile.read("recursos/info_banderas.csv");                 //Lee la bandera, debe hacerse al principio de la clase Juego.java
         int indices[] = BaseDeDatos.CrearIndices(25);                                       //Llamado al metodo de crear indices de la clase "BaseDeDatos", 25 indices porque son 25 banderas
+        int puntaje = 0;                                                                    //Variable para puntos (si llega a 50 pasa de nivel)
         //INICIALIZACIÓN DEL JUEGO
         
         int r1 = (int)(Math.random()*25);                                                   //Variable int que elige aleatoriamente un num del 0 al 25
         String respuestas[] = new String[4];                                                //Arreglo que almacena las 4 respuestas de cada intento (1 correcta, 3 random)
 
+        System.out.println("\nPUNTOS: " + puntaje + "\n");
         BaseDeDatos.ImprimirBandera(banderas, indices[r1]);                                 //Imprime la bandera correspondiente al indice elegido con la var "r1"
         System.out.println("");                                                             //Salto de linea
         respuestas[0] = BaseDeDatos.ImprimirDatos(banderas, indices[r1], 0);                //LLenamos el arreglo de respuestas con el nombre del país correspondiente al indice elegido con la var "r1"
@@ -97,35 +99,45 @@ public class Juego {
             respuestas[i] = temp;
         }
 
-        System.out.println("");                                                         //Salto de linea
+        System.out.println("\nA que pais corresponde esta bandera?");                                                         
 
-        int contador_resps = 1;
+        int contador_resps = 1;                                                         //Variable para poner numero antes de la respuesta
         //Ciclo for que imprime el arreglo desorganizado
         for (int j = 0; j < respuestas.length; j++) 
         {
             System.out.println(contador_resps + ". " + respuestas[j]);
             contador_resps = contador_resps + 1;
-
-            if(respuestas[j].equals(BaseDeDatos.ImprimirDatos(banderas, indices[r1], 0)))
-            {
-                System.out.println("La de arriba es la correcta");
-            }
         }     
 
         //Elección de la respuesta correcta
+        int eleccion = 0;                                                               //Variable elección (la cual ingresará el usuario)
+        int correcta = 0;                                                               //Variable que almacenará la respuesta correcta
+        System.out.println();                                                           //Salto de linea
 
-        //El nivel se va a repetir maximo 10 veces, si adivina 5 preguntas pasa de nivel, si despues de las 10 no adivinó, ya pierde
-        //Si adivina una respuesta se le suman puntos pero si falla, se le restan
+        //Ciclo para encontrar la respuesta correcta
+        for (int i = 0; i < respuestas.length; i++) 
+        {
+            if(respuestas[i].equals(BaseDeDatos.ImprimirDatos(banderas, indices[r1], 0)))   //Si la respuesta es igual a la correcta (primera variable random)
+            {
+                correcta = i+1;                                                             //Se asgina la opción correcta al indice + 1 para que no empiece en 0
+                //System.out.println(correcta);
+            }
+        }
 
-        //int eleccion = 0;
-        //eleccion = ConsoleInput.getInt();
+        eleccion = ConsoleInput.getInt();                                                   //Se pide la respuesta del usuario
 
-        //primero hare como saber que una respuesta es correcta
+        if(eleccion == correcta)                                                            //Si la respuesta del usuario es correcta 
+        {
+            puntaje = puntaje + 10;                                                         //Suma 10 puntos
+        }
+        else                                                                                //De otro modo
+        {
+            puntaje = puntaje - 10;                                                         //Resta 10 puntos
+        }   
+        System.out.println("\nPUNTOS: " + puntaje + "\n");                                  //Imprime el puntaje despues de responder
 
         
-
-        
-
+        //La idea es que todooooo el codigo se repita varias veces para que no te devuelva al menu principal, eso falta
 
     }
     //MEDIO
