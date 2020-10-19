@@ -72,8 +72,7 @@ public class BaseDeDatos {
             datos = banderas[i].split(";");
         }
         
-        //Esto es para imprimir un dato en específico
-        //System.out.print(datos[pregunta]);
+        //Retorna una String con la respuesta es específico
         respuesta = datos[pregunta];
         return respuesta;
     }
@@ -88,7 +87,7 @@ public class BaseDeDatos {
             indices[i] = contador;
             contador = contador + 20;
         }
-        return indices;
+        return indices;                                                             //Retorna un arreglo con los indices
     }
 
     //Esto está para pruebas, esta clase no debería de poder ejecutarse, es solo para probar funcionamiento
