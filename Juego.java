@@ -29,9 +29,52 @@ public class Juego {
         respuestas[0] = BaseDeDatos.ImprimirDatos(banderas, indices[r1], 0);                //LLenamos el arreglo de respuestas con el nombre del país correspondiente al indice elegido con la var "r1"
         
 
-        int r2 = 0, r3 = 0, r4 = 0; 
+        int r2 = 0, r3 = 0, r4 = 0;                                                         //Declaración e inicialización de las otas 3 variables random
 
-        
+        r2 = (int)(Math.random()*25);                                                       //r2 será igual a un num aleatorio del 0 al 25
+        if(r2 == r1)                                                                        //Si r2 es igual a r1
+        {
+            do                                                          
+            {   
+                r2 = (int)(Math.random()*25);                                               //Va a volver a elegir un num aleatorio
+            }
+            while(r2 == r1);                                                                //Hasta que sea diferente de r1
+            respuestas[1] = BaseDeDatos.ImprimirDatos(banderas, indices[r2], 0);            //Cuando termina de iterar se asigna al metodo de los datos
+        }
+        else
+        {
+            respuestas[1] = BaseDeDatos.ImprimirDatos(banderas, indices[r2], 0); 
+        }
+
+        r3 = (int)(Math.random()*25); 
+        if(r3 == r2 || r3 == r1)
+        {
+            do
+            {
+                r3 = (int)(Math.random()*25); 
+            }
+            while(r3 == r2 || r3 == r1);
+            respuestas[2] = BaseDeDatos.ImprimirDatos(banderas, indices[r3], 0);
+        }
+        else
+        {
+            respuestas[2] = BaseDeDatos.ImprimirDatos(banderas, indices[r3], 0);
+        }
+
+        r4 = (int)(Math.random()*25); 
+        if(r4 == r3 || r4 == r2 || r4 == r1)
+        {
+            do 
+            {
+                r4 = (int)(Math.random()*25);
+            }
+            while(r4 == r3 || r4 == r2 || r4 == r1);
+            respuestas[3] = BaseDeDatos.ImprimirDatos(banderas, indices[r4], 0);
+        }
+        else
+        {
+            respuestas[3] = BaseDeDatos.ImprimirDatos(banderas, indices[r4], 0);
+        }
 
 
 
