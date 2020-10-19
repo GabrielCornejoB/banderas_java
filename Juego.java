@@ -31,6 +31,7 @@ public class Juego {
 
         int r2 = 0, r3 = 0, r4 = 0;                                                         //Declaración e inicialización de las otas 3 variables random
 
+        //PROCESO PARA ELEGIR LA OPCION RANDOM 2
         r2 = (int)(Math.random()*25);                                                       //r2 será igual a un num aleatorio del 0 al 25
         if(r2 == r1)                                                                        //Si r2 es igual a r1
         {
@@ -43,9 +44,11 @@ public class Juego {
         }
         else
         {
-            respuestas[1] = BaseDeDatos.ImprimirDatos(banderas, indices[r2], 0); 
+            respuestas[1] = BaseDeDatos.ImprimirDatos(banderas, indices[r2], 0);            //Si desde el principio ya es distinto, simplemente se asigna la respuesta
         }
+        //PROCESO PARA ELEGIR LA OPCION RANDOM 2
 
+        //PROCESO PARA ELEGIR LA OPCION RANDOM 3
         r3 = (int)(Math.random()*25); 
         if(r3 == r2 || r3 == r1)
         {
@@ -60,7 +63,9 @@ public class Juego {
         {
             respuestas[2] = BaseDeDatos.ImprimirDatos(banderas, indices[r3], 0);
         }
+        //PROCESO PARA ELEGIR LA OPCION RANDOM 3
 
+        //PROCESO PARA ELEGIR LA OPCION RANDOM 4
         r4 = (int)(Math.random()*25); 
         if(r4 == r3 || r4 == r2 || r4 == r1)
         {
@@ -75,44 +80,17 @@ public class Juego {
         {
             respuestas[3] = BaseDeDatos.ImprimirDatos(banderas, indices[r4], 0);
         }
+        //PROCESO PARA ELEGIR LA OPCION RANDOM 4
 
-
-
-        /*
-        r3 = (int)(Math.random()*25);
-        r2 = (int)(Math.random()*25);
-        r4 = (int)(Math.random()*25);
-
-        if (r2 != r3 && r2 != r4 && r2!= random && r3 != random && r4 != random)
-        {
-            respuestas[1] = BaseDeDatos.ImprimirDatos(banderas, indices[r2], 0);  
-            respuestas[2] = BaseDeDatos.ImprimirDatos(banderas, indices[r3], 0);  
-            respuestas[3] = BaseDeDatos.ImprimirDatos(banderas, indices[r4], 0);  
-        } 
-            else 
-            {
-                do
-                {
-                    r2 = (int)(Math.random()*25);
-                    r3 = (int)(Math.random()*25);
-                    r4 = (int)(Math.random()*25);  
-                } 
-                while (r2 == r3 && r2 == r4 && r2== random && r3 == random && r4 == random);
-
-                    respuestas[1] = BaseDeDatos.ImprimirDatos(banderas, indices[r2], 0);  
-                    respuestas[2] = BaseDeDatos.ImprimirDatos(banderas, indices[r3], 0);  
-                    respuestas[3] = BaseDeDatos.ImprimirDatos(banderas, indices[r4], 0);  
-            }
-        */
+        //Imprime las opciones del arreglo 
         for (int j = 0; j < respuestas.length; j++) 
         {
             System.out.println(respuestas[j]);
         }
 
-        
-        
 
-                                            
+        //Desorganizar el arreglo
+                                     
     }
     //MEDIO
     //La idea del nivel 2 es hacerlo con comidas tipicas
