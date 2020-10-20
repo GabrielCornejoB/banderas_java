@@ -300,7 +300,7 @@ do{
             if(eleccion == correcta)                                                           
             {
                 puntaje = puntaje + 10; 
-                if (puntaje == 50) {
+                if (puntaje == 100) {
                     break;
                 } 
                 else
@@ -456,7 +456,7 @@ do{
             if(eleccion == correcta)                                                           
             {
                 puntaje = puntaje + 10; 
-                if (puntaje == 50) {
+                if (puntaje == 150) {
                     break;
                 } 
                 else
