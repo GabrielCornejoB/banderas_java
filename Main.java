@@ -22,9 +22,11 @@ public class Main{
 
                     if (Juego.puntaje == 100)
                     {
-                        Juego.Nivel_3();    
-                    }
-                    Opciones.MasInfo(); 
+                        Juego.Nivel_3();  
+                        if (Juego.puntaje == 150) {
+                            Opciones.MasInfo();     
+                        }  
+                    }  
                 }                                                                       //Si elige la opción 1, va al primer nivel del juego
                     break;
                 case 2:
