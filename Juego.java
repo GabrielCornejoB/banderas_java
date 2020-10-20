@@ -158,7 +158,7 @@ do{
                 {
                     puntaje = puntaje + 10;  
                     System.out.println("\n" + ConsoleColors.RED + "-10");   
-                    System.out.println("UFF, eso estuvo serca, menos mal que no tenemos puntajesnegativos :)"); 
+                    System.out.println("UFF, eso estuvo cerca, menos mal no tenemos puntajes negativos :)"); 
                 }else
                 {
                     System.out.println("\n" + ConsoleColors.RED + "-10"); 
@@ -170,8 +170,8 @@ do{
     //comprueba si salio del juego forsosamente o lo gano
     if (puntaje > 49) 
     {
-        System.out.println(ConsoleColors.GREEN_BOLD+ "¡Felicidades completaste el nivel 1!");  
-        System.out.println(ConsoleColors.GREEN_BOLD+ "NIVEL 2: Adivina la comida tipica del país");  
+        System.out.println(ConsoleColors.GREEN_BOLD+ "Felicidades completaste el nivel 1!");  
+        System.out.println(ConsoleColors.GREEN_BOLD+ "NIVEL 2: Adivina la comida tipica del pais");  
     } 
     //------------*
   
@@ -315,7 +315,7 @@ do{
                 {
                     puntaje = puntaje + 10;  
                     System.out.println("\n" + ConsoleColors.RED + "-10");   
-                    System.out.println("UFF, eso estuvo serca, menos mal que no tenemos puntajesnegativos :)"); 
+                    System.out.println("UFF, eso estuvo cerca, menos mal no tenemos puntajes negativos :)"); 
                 }else
                 {
                     System.out.println("\n" + ConsoleColors.RED + "-10"); 
@@ -327,7 +327,7 @@ do{
     //comprueba si salio del juego forsosamente o lo gano
     if (puntaje > 99) 
     {
-        System.out.println(ConsoleColors.GREEN_BOLD+ "¡Felicidades completaste el nivel 2!");  
+        System.out.println(ConsoleColors.GREEN_BOLD+ "Felicidades completaste el nivel 2!");  
         System.out.println(ConsoleColors.GREEN_BOLD+ "NIVEL 3: Adivina la capital");  
     } 
     //------------*
@@ -418,7 +418,7 @@ do{
             respuestas[i] = temp;
         }
 
-        System.out.println("\nCual es la capital del pais correspondiente a la vandera?");                                                         
+        System.out.println("\nCual es la capital del pais correspondiente a la bandera?");                                                         
 
         int contador_resps = 1;                                                         //Variable para poner numero antes de la respuesta
         //Ciclo for que imprime el arreglo desorganizado
@@ -471,7 +471,7 @@ do{
                 {
                     puntaje = puntaje + 10;  
                     System.out.println("\n" + ConsoleColors.RED + "-10");   
-                    System.out.println("UFF, eso estuvo serca, menos mal que no tenemos puntajesnegativos :)"); 
+                    System.out.println("UFF, eso estuvo cerca, menos mal no tenemos puntajesnegativos :)"); 
                 }else
                 {
                     System.out.println("\n" + ConsoleColors.RED + "-10"); 
