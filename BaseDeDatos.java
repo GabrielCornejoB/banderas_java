@@ -74,18 +74,18 @@ public class BaseDeDatos {
         
         //Retorna una String con la respuesta es específico
         respuesta = datos[pregunta];
-        return respuesta;
+        return respuesta;                                                           //Retorna un string respuesta, con la información de la pregunta
     }
 
-    //Este metodo coloca los indices de cada bandera en un arreglo, el argumento total, es el total de banderas
+    //Este metodo coloca los indices de cada bandera en un arreglo, el argumento "total", es el total de banderas
     public static int[] CrearIndices(int total)
     {
-        int indices[] = new int[total];
-        int contador = 0;
+        int indices[] = new int[total];                                             //Arreglo que almacena los indices de las banderas
+        int contador = 0;                                                           //Contador para que cada indice sean 20 lineas del archivo csv
 
-        for (int i = 0; i < indices.length; i++) {
+        for (int i = 0; i < indices.length; i++) {                                  //Ciclo que recorre el arreglo de indices
             indices[i] = contador;
-            contador = contador + 20;
+            contador = contador + 20;                                               //Cada 20 lineas de la DB se asigna un indice, uno para cada bandera
         }
         return indices;                                                             //Retorna un arreglo con los indices
     }
