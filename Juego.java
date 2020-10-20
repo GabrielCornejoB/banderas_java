@@ -6,31 +6,25 @@ public class Juego {
 
     public static int puntaje = 0;
     
-
-    //Letras ascii generada en http://patorjk.com/software/taag/#p=display&f=Doom&t=NIVEL%20%201 con fuente "Doom"
-    public static void Prueba()
-    {
-        
-        System.out.println("   _   _ _____ _   _ _____ _        __   ");
-        System.out.println("  | \\ | |_   _| | | |  ___| |      /  | ");
-        System.out.println("  |  \\| | | | | | | | |__ | |      `| | ");
-        System.out.println("  | . ` | | | | | | |  __|| |       | | ");
-        System.out.println("  | |\\  |_| |_\\ \\_/ / |___| |____  _| |_");
-        System.out.println("  \\_| \\_/\\___/ \\___/\\____/\\_____/  \\___/");
-    }
     //FACIL
     //La idea del nivel 1 es mostrar una bandera al azar y que se generen 4 opciones (una correcta, y 3 incorrectas que se elegirán aleatoriamente)
     public static void Nivel_1()
-{   
-
+    {   
     
-            
         //INICIZALICACIÓN DEL JUEGO
         String banderas[] = ConsoleFile.read("recursos/info_banderas.csv");                 //Lee la bandera, debe hacerse al principio de la clase Juego.java
         int indices[] = BaseDeDatos.CrearIndices(25);                                       //Llamado al metodo de crear indices de la clase "BaseDeDatos", 25 indices porque son 25 banderas      
-        puntaje = 0;                                                                    //Variable para puntos (si llega a 50 pasa de nivel)
+        puntaje = 0;                                                                         //Variable para puntos (si llega a 50 pasa de nivel)
         //INICIALIZACIÓN DEL JUEGO
-do{       
+
+        System.out.println(ConsoleColors.YELLOW + "   _   _ _____ _   _ _____ _        __   ");
+        System.out.println("  | \\ | |_   _| | | |  ___| |      /  | " );
+        System.out.println("  |  \\| | | | | | | | |__ | |      `| | "+ ConsoleColors.RESET);
+        System.out.println(ConsoleColors.BLUE +"  | . ` | | | | | | |  __|| |       | | " );
+        System.out.println("  | |\\  |_| |_\\ \\_/ / |___| |____  _| |_"+ ConsoleColors.RESET);
+        System.out.println(ConsoleColors.RED +"  \\_| \\_/\\___/ \\___/\\____/\\_____/  \\___/" + ConsoleColors.RESET);
+
+    do{       
         int r1 = (int)(Math.random()*25);                                                   //Variable int que elige aleatoriamente un num del 0 al 25
         String respuestas[] = new String[4];                                                //Arreglo que almacena las 4 respuestas de cada intento (1 correcta, 3 random)
 
@@ -179,6 +173,12 @@ do{
     //La idea del nivel 2 es hacerlo con comidas tipicas
     public static void Nivel_2()
 {
+        System.out.println(ConsoleColors.WHITE + "   _   _ _____ _   _ _____ _        _____ ");
+        System.out.println("  | \\ | |_   _| | | |  ___| |      / __  \\" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.BLUE + "  |  \\| | | | | | | | |__ | |      `' / /'");
+        System.out.println("  | . ` | | | | | | |  __|| |        / /  "+ ConsoleColors.RESET);
+        System.out.println(ConsoleColors.RED + "  | |\\  |_| |_\\ \\_/ / |___| |____  ./ /___");
+        System.out.println("  \\_| \\_/\\___/ \\___/\\____/\\_____/  \\_____/"+ ConsoleColors.RESET);
    
             
         //INICIZALICACIÓN DEL JUEGO
@@ -337,6 +337,14 @@ do{
     //La idea del nivel 3 es hacerlo adivinando la capital
     public static void Nivel_3()
     {
+
+        System.out.println(ConsoleColors.WHITE + "   _   _ _____ _   _ _____ _        _____ ");
+        System.out.println("  | \\ | |_   _| | | |  ___| |      |____ |" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.GREEN + "  |  \\| | | | | | | | |__ | |          / /");
+        System.out.println("  | . ` | | | | | | |  __|| |          \\ \\" + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.RED + "  | |\\  |_| |_\\ \\_/ / |___| |____  .___/ /");
+        System.out.println("  \\_| \\_/\\___/ \\___/\\____/\\_____/  \\____/ " + ConsoleColors.RESET);
+
   //INICIZALICACIÓN DEL JUEGO
         String banderas[] = ConsoleFile.read("recursos/info_banderas.csv");                 //Lee la bandera, debe hacerse al principio de la clase Juego.java
         int indices[] = BaseDeDatos.CrearIndices(25);                                       //Llamado al metodo de crear indices de la clase "BaseDeDatos", 25 indices porque son 25 banderas      
