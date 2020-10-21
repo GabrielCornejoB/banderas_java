@@ -5,7 +5,7 @@ import java.util.Random;
 //Clase donde iran los niveles del juego y probablemente el manejo de la puntuación
 public class Juego {
 
-    public static int puntaje = 0;
+    public static int puntaje = 0; //variable global para interconectar los niveles
     
     //FACIL
     //La idea del nivel 1 es mostrar una bandera al azar y que se generen 4 opciones (una correcta, y 3 incorrectas que se elegirán aleatoriamente)
@@ -161,7 +161,7 @@ public class Juego {
                 }  
             }    
         
-        }while(puntaje >= 0 && puntaje < 50);
+        }while(puntaje >= 0 && puntaje < 50); 
         //comprueba si salio del juego forsosamente o lo gano
         if (puntaje > 49) 
         {

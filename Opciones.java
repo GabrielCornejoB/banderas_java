@@ -37,6 +37,8 @@ public class Opciones {
         System.out.println("||    Por ejemplo en el nivel 3 se te va a mostrar una bandera y se te daran     ||");
         System.out.println("||    4 capitales para sumar puntos debes elegir la respuesta correcta           ||");
         System.out.println("||                                                                               ||");
+        System.out.println("||    El nilev 1 es adivinar los paises el nivel 2 las capitales y el nivel 3    ||");
+        System.out.println("||    la comida, con el nivel 1 de 100 puntos para ganar y los otros dos de 50   ||");                                                                        
         System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||");
     }
     //Metodo que muestra más información del juego
