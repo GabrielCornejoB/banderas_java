@@ -16,14 +16,14 @@ public class Main{
                 case 1:
                     Juego.Nivel_1(); 
 
-                if (Juego.puntaje == 50)
+                if (Juego.puntaje == 100)
                 {
                     Juego.Nivel_2();
 
-                    if (Juego.puntaje == 100)
+                    if (Juego.puntaje == 50)
                     {
                         Juego.Nivel_3();  
-                        if (Juego.puntaje == 150) {
+                        if (Juego.puntaje == 50) {
                             Opciones.MasInfo();     
                         }  
                     }  
