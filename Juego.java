@@ -138,7 +138,7 @@ public class Juego {
                 if(eleccion == correcta)                                                           
                 {
                     puntaje = puntaje + 10; 
-                    if (puntaje == 50) {
+                    if (puntaje == 100) {
                         break;
                     } 
                     else
@@ -161,9 +161,9 @@ public class Juego {
                 }  
             }    
         
-        }while(puntaje >= 0 && puntaje < 50); 
+        }while(puntaje >= 0 && puntaje < 100); 
         //comprueba si salio del juego forsosamente o lo gano
-        if (puntaje > 49) 
+        if (puntaje > 99) 
         {
             System.out.println(ConsoleColors.GREEN_BOLD+ "\nFelicidades completaste el nivel 1!" + ConsoleColors.RESET);  
         } 
@@ -300,7 +300,7 @@ public class Juego {
                 if(eleccion == correcta)                                                           
                 {
                     puntaje = puntaje + 10; 
-                    if (puntaje == 100) {
+                    if (puntaje == 50) {
                         break;
                     } 
                     else
@@ -323,9 +323,9 @@ public class Juego {
                 }  
             }    
         
-        }while(puntaje >= 0 && puntaje < 100);
+        }while(puntaje >= 0 && puntaje < 50);
         //comprueba si salio del juego forsosamente o lo gano
-        if (puntaje > 99) 
+        if (puntaje > 49) 
         {
             System.out.println(ConsoleColors.GREEN_BOLD+ "\nFelicidades completaste el nivel 2!" + ConsoleColors.RESET);      
         } 
@@ -465,7 +465,7 @@ public class Juego {
                 if(eleccion == correcta)                                                           
                 {
                     puntaje = puntaje + 10; 
-                    if (puntaje == 150) {
+                    if (puntaje == 50) {
                         break;
                     } 
                     else
@@ -488,9 +488,9 @@ public class Juego {
                 }  
             }    
         
-        }while(puntaje >= 0 && puntaje < 150);
+        }while(puntaje >= 0 && puntaje < 50);
         //comprueba si salio del juego forsosamente o lo gano
-        if (puntaje > 149) 
+        if (puntaje > 49) 
         {
             System.out.println(ConsoleColors.GREEN_BOLD+ "¡Felicidades completaste el nivel 3!");  
             System.out.println(ConsoleColors.GREEN_BOLD+ "COMPLETASTE EL JUEGO, MUCHAS GRACIAS POR JUGAR");  
